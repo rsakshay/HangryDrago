@@ -5,10 +5,10 @@ using DG.Tweening;
 
 public class PlayerFlingScript : MonoBehaviour {
 
-    public float aimSpeed = 5;
     public float MINImpulsePower = 3;
     public float MAXImpulsePower = 7;
     public float TweenTime = 1;
+    public Transform aim;
 
     private Rigidbody rgb;
     private bool flingHeld = false;
@@ -41,20 +41,11 @@ public class PlayerFlingScript : MonoBehaviour {
                 flingHeld = false;
             }
         }
-
-        CheckAim();
-    }
-
-    void CheckAim()
-    {
-        float rotation = InputMan.GetLHorizontal();
-
-        transform.Rotate(new Vector3(0, 0, -rotation));
     }
 
     void Fling()
     {
-        rgb.AddForce(transform.right * currentImpulsePower, ForceMode.Impulse);
+        rgb.AddForce(aim.up * currentImpulsePower, ForceMode.Impulse);
     }
 
     private void OnCollisionStay(Collision collision)
