@@ -8,7 +8,7 @@ public class PlayerFlingScript : MonoBehaviour {
     public float MINImpulsePower = 3;
     public float MAXImpulsePower = 7;
     public float TweenTime = 1;
-    public Transform aim;
+    public AimScript aim;
 
     private Rigidbody rgb;
     private bool flingHeld = false;
@@ -45,7 +45,7 @@ public class PlayerFlingScript : MonoBehaviour {
 
     void Fling()
     {
-        rgb.AddForce(aim.up * currentImpulsePower, ForceMode.Impulse);
+        rgb.AddForce(aim.AimDir * currentImpulsePower, ForceMode.Impulse);
     }
 
     private void OnCollisionStay(Collision collision)

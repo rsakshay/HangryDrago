@@ -1,0 +1,189 @@
+fileFormatVersion: 2
+guid: 03a2f0c5008944745b90e2b078c93aa4
+timeCreated: 1521228884
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: WurmBody01
+    100004: WurmEyeLeft
+    100006: WurmEyeRight
+    100008: WurmFootLeft01
+    100010: WurmFootLeft02
+    100012: WurmFootLeft03
+    100014: WurmFootLeft04
+    100016: WurmFootRight01
+    100018: WurmFootRight02
+    100020: WurmFootRight03
+    100022: WurmFootRight04
+    100024: WurmFrill01
+    100026: WurmFrill02
+    100028: WurmFrill03
+    100030: WurmFrill04
+    100032: WurmFrill05
+    100034: WurmFrill06
+    100036: WurmHeadBase
+    100038: WurmMouthLeft
+    100040: WurmMouthRight
+    100042: WurmTail
+    400000: //RootNode
+    400002: WurmBody01
+    400004: WurmEyeLeft
+    400006: WurmEyeRight
+    400008: WurmFootLeft01
+    400010: WurmFootLeft02
+    400012: WurmFootLeft03
+    400014: WurmFootLeft04
+    400016: WurmFootRight01
+    400018: WurmFootRight02
+    400020: WurmFootRight03
+    400022: WurmFootRight04
+    400024: WurmFrill01
+    400026: WurmFrill02
+    400028: WurmFrill03
+    400030: WurmFrill04
+    400032: WurmFrill05
+    400034: WurmFrill06
+    400036: WurmHeadBase
+    400038: WurmMouthLeft
+    400040: WurmMouthRight
+    400042: WurmTail
+    2300000: WurmBody01
+    2300002: WurmEyeLeft
+    2300004: WurmEyeRight
+    2300006: WurmFootLeft01
+    2300008: WurmFootLeft02
+    2300010: WurmFootLeft03
+    2300012: WurmFootLeft04
+    2300014: WurmFootRight01
+    2300016: WurmFootRight02
+    2300018: WurmFootRight03
+    2300020: WurmFootRight04
+    2300022: WurmFrill01
+    2300024: WurmFrill02
+    2300026: WurmFrill03
+    2300028: WurmFrill04
+    2300030: WurmFrill05
+    2300032: WurmFrill06
+    2300034: WurmHeadBase
+    2300036: WurmMouthLeft
+    2300038: WurmMouthRight
+    2300040: WurmTail
+    3300000: WurmBody01
+    3300002: WurmEyeLeft
+    3300004: WurmEyeRight
+    3300006: WurmFootLeft01
+    3300008: WurmFootLeft02
+    3300010: WurmFootLeft03
+    3300012: WurmFootLeft04
+    3300014: WurmFootRight01
+    3300016: WurmFootRight02
+    3300018: WurmFootRight03
+    3300020: WurmFootRight04
+    3300022: WurmFrill01
+    3300024: WurmFrill02
+    3300026: WurmFrill03
+    3300028: WurmFrill04
+    3300030: WurmFrill05
+    3300032: WurmFrill06
+    3300034: WurmHeadBase
+    3300036: WurmMouthLeft
+    3300038: WurmMouthRight
+    3300040: WurmTail
+    4300000: WurmEyeRight
+    4300002: WurmFrill03
+    4300004: WurmFootRight02
+    4300006: WurmEyeLeft
+    4300008: WurmFootLeft02
+    4300010: WurmFootRight03
+    4300012: WurmFootRight01
+    4300014: WurmBody01
+    4300016: WurmFootLeft03
+    4300018: WurmFootLeft01
+    4300020: WurmFootLeft04
+    4300022: WurmFootRight04
+    4300024: WurmTail
+    4300026: WurmFrill01
+    4300028: WurmFrill02
+    4300030: WurmFrill06
+    4300032: WurmHeadBase
+    4300034: WurmFrill05
+    4300036: WurmFrill04
+    4300038: WurmMouthRight
+    4300040: WurmMouthLeft
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
