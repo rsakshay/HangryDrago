@@ -56,7 +56,7 @@ public class TrailScript : MonoBehaviour {
         Vector2 uVel = player.JumpVel;
         //Vector3 startPos = player.transform.position;
 
-        float distance = 2 * uVel.x * uVel.y / gravity;
+        float distance = Mathf.Abs(uVel.x * uVel.y / gravity);
         float frac = distance / NumPoints;
 
         for (int i = 0; i < NumPoints; i++)
