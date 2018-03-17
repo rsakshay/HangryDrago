@@ -23,6 +23,7 @@ public class Collectable : MonoBehaviour
             myParticleSystem.Emit(particlesEmitted);
             myParticleSystem.Stop();
             DestroyFruit();
+            collider.gameObject.GetComponent<PlayerFlingScript>().PlayEatingSound();
         }
     }
 

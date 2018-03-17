@@ -6,6 +6,7 @@ using DG.Tweening;
 public class Mole : MonoBehaviour {
 
     public SphereCollider distanceTrigger;
+    public Transform moleHole;
 
     public float popupDistance;
     public float pause;
@@ -16,11 +17,15 @@ public class Mole : MonoBehaviour {
     public float stayUnderGroundtime;
 
     private Vector3 originalPosition;
+    private Vector3 originalHolePos;
     private DataTypes.Constants.EnemyStates currentState;
+    private bool hasHoleAppeared;
 
     private void Start()
     {
         originalPosition = transform.position;
+        originalHolePos = moleHole.position;
+        hasHoleAppeared = false;
     }
 
     void OnTriggerStay(Collider collider)
@@ -33,7 +38,14 @@ public class Mole : MonoBehaviour {
 
     private void BeginAttack()
     {
+        if (!hasHoleAppeared)
+        {
+            moleHole.DOMove(new Vector3(moleHole.position.x, moleHole.position.y + popupDistance, moleHole.position.z), pause);
+            hasHoleAppeared = true;
+        }
+
         currentState = DataTypes.Constants.EnemyStates.Attacking;
+       
         gameObject.transform
             .DOMove(new Vector3(gameObject.transform.position.x, gameObject.transform.position.y + popupDistance, gameObject.transform.position.z), pause)
             .SetEase(Ease.OutQuad)

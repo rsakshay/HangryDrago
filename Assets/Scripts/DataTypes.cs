@@ -10,8 +10,8 @@ public class DataTypes {
 
         public const string PLAYER_TAG = "Player";
 
-        public const float FURTHEST_CAMERA_LEFT = 1.5f;
-        public const float FURTHEST_CAMERA_RIGHT = 29.0f;
+        public const float FURTHEST_CAMERA_LEFT = -5.0f;
+        public const float FURTHEST_CAMERA_RIGHT = 110.32f;
         public const float FURTHEST_CAMERA_UP = 16.5f;
         public const float FURTHEST_CAMERA_DOWN = 1.71f;
 
@@ -24,7 +24,10 @@ public class DataTypes {
 
         public enum TypesOfFruit
         {
-            Cherry
+            Cherry,
+            Plumb,
+            Pear,
+            Melon
         }
 
         public static int FindIndexforFruit(TypesOfFruit fruit)
@@ -33,6 +36,15 @@ public class DataTypes {
             {
                 case TypesOfFruit.Cherry:
                     return 0;
+
+                case TypesOfFruit.Plumb:
+                    return 1;
+
+                case TypesOfFruit.Pear:
+                    return 2;
+
+                case TypesOfFruit.Melon:
+                    return 3;
             }
 
             return -1;

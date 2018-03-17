@@ -2,31 +2,35 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.UI;
 
 public class PlayerFlingScript : MonoBehaviour {
 
-    public float MINVelocity = 5;
-    public float MAXVelocity = 15;
+    public float MINvelocity = 3;
+    public float MAXvelocityPower = 7;
     public float TweenTime = 1;
-    public float CD = 1;
     public AimScript aim;
 
+    public AudioClip flingAudio;
+    public AudioClip landAudio;
+    public AudioClip eatAudio;
+
+    public Text gameOverText;
+    
     private Rigidbody rgb;
+    private AudioSource myAudioSource;
     private bool flingHeld = false;
     private const string flingKey = "X";
-    private float currentImpulsePower = 0;
+    private const string endKey = "Y";
+    private float currentImpuleVelocity = 0;
     private float flingStartTime;
-    private bool isJumping = false;
-    private float jumpStartTime;
-
-    public Vector3 JumpVel { get { return aim.AimDir * currentImpulsePower; } }
-    public bool IsJumping { get { return isJumping; } }
-    public bool IsAiming { get { return flingHeld; } }
 
     // Use this for initialization
     void Awake ()
     {
         rgb = GetComponent<Rigidbody>();
+        myAudioSource = GetComponent<AudioSource>();
+        gameOverText.gameObject.SetActive(false);
 	}
 	
 	// Update is called once per frame
@@ -37,10 +41,10 @@ public class PlayerFlingScript : MonoBehaviour {
             flingStartTime = Time.time;
         }
 
-        if (flingHeld && JumpCheck())
+        if (flingHeld)
         {
             float percentComplete = (Time.time - flingStartTime) / TweenTime;
-            currentImpulsePower = Mathf.Lerp(MINVelocity, MAXVelocity, percentComplete);
+            currentImpuleVelocity = Mathf.Lerp(MINvelocity, MAXvelocityPower, percentComplete);
 
             if (InputMan.GetButtonUp(flingKey))
             {
@@ -48,30 +52,19 @@ public class PlayerFlingScript : MonoBehaviour {
                 flingHeld = false;
             }
         }
-    }
 
-    bool JumpCheck()
-    {
-        if (isJumping || Time.time - jumpStartTime < CD)
-            return false;
-
-        return true;
+        if(InputMan.GetButtonDown(endKey))
+        {
+            gameOverText.gameObject.SetActive(true);
+            InputMan.DisableControls();
+        }
     }
 
     void Fling()
     {
-        rgb.velocity = aim.AimDir * currentImpulsePower;
         //rgb.AddForce(aim.AimDir * currentImpulsePower, ForceMode.Impulse);
-        isJumping = true;
-        jumpStartTime = Time.time;
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (!collision.gameObject.tag.ToLower().Contains("Blocker"))
-        {
-            isJumping = false;
-        }
+        myAudioSource.PlayOneShot(flingAudio);
+        rgb.velocity = aim.AimDir * currentImpuleVelocity;
     }
 
     private void OnCollisionStay(Collision collision)
@@ -79,10 +72,26 @@ public class PlayerFlingScript : MonoBehaviour {
         if ((int)rgb.velocity.y > 0)
             return;
 
-        if (!collision.gameObject.tag.ToLower().Contains("Blocker"))
-        {
-            isJumping = false;
-        }
+        //if (collision.gameObject.tag.ToLower() != "blocker")
+        //{
+        //    myAudioSource.PlayOneShot(landAudio);
+        //}
+
         rgb.angularVelocity = Vector3.zero;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        //if (collision.gameObject.tag.ToLower() != "blocker")
+        //{
+        //    myAudioSource.PlayOneShot(landAudio);
+        //}
+
+        rgb.angularVelocity = Vector3.zero;
+    }
+
+    public void PlayEatingSound()
+    {
+        myAudioSource.PlayOneShot(eatAudio);
     }
 }

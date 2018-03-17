@@ -8,17 +8,26 @@ public class AimScript : MonoBehaviour {
     public Transform pivot;
 
     public Vector3 AimDir { get { return -transform.right; } }
-	
-	// Update is called once per frame
-	void Update ()
+
+    private float currentRotation;
+
+    // Use this for initialization
+    void Start () {
+        currentRotation = transform.rotation.z;
+	}
+
+    private void FixedUpdate()
     {
+        transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, transform.rotation.eulerAngles.y, currentRotation);
+    }
+
+    // Update is called once per frame
+    void Update () {
 		CheckAim();
 	}
     
     void CheckAim()
-    {
-        float rotation = InputMan.GetLHorizontal();
-
-        transform.Rotate(Vector3.forward, rotation * aimSpeed);
+    { 
+        currentRotation += InputMan.GetLHorizontal() * aimSpeed * Time.deltaTime;
     }
 }

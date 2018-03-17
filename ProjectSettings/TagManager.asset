@@ -41,3 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: BackLayerTwo
+    uniqueID: 70514853
+    locked: 0
+  - name: BackLayerOne
+    uniqueID: 408892317
+    locked: 0
+  - name: UILayer
+    uniqueID: 4245276939
+    locked: 0
