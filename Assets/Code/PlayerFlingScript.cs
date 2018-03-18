@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerFlingScript : MonoBehaviour {
 
@@ -16,6 +17,7 @@ public class PlayerFlingScript : MonoBehaviour {
     public AudioClip eatAudio;
 
     public Text gameOverText;
+    public string endGameSceneName = "Endscene";
     
     private Rigidbody rgb;
     private AudioSource myAudioSource;
@@ -31,6 +33,7 @@ public class PlayerFlingScript : MonoBehaviour {
         rgb = GetComponent<Rigidbody>();
         myAudioSource = GetComponent<AudioSource>();
         gameOverText.gameObject.SetActive(false);
+        InputMan.EnableControls();
 	}
 	
 	// Update is called once per frame
@@ -57,6 +60,7 @@ public class PlayerFlingScript : MonoBehaviour {
         {
             gameOverText.gameObject.SetActive(true);
             InputMan.DisableControls();
+            DOVirtual.DelayedCall(3, ()=> SceneManager.LoadScene(endGameSceneName));
         }
     }
 
