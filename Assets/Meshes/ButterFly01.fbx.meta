@@ -1,0 +1,205 @@
+fileFormatVersion: 2
+guid: 39fc9fc9068f16f4f9399dd82a5fccbf
+timeCreated: 1521325898
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: BflyAntennas
+    100002: BflyBody
+    100004: BflyEyeLeft
+    100006: BflyEyeRight
+    100008: BflyFrill01
+    100010: BflyFrill02
+    100012: BflyFrill03
+    100014: BflyFrill04
+    100016: BflyFrill05
+    100018: BflyFrill06
+    100020: BflyFrill07
+    100022: BflyFrill08
+    100024: BflyHeadBase
+    100026: BflyTail
+    100028: BflyWingsLeft
+    100030: BflyWingsRight
+    100032: //RootNode
+    400000: BflyAntennas
+    400002: BflyBody
+    400004: BflyEyeLeft
+    400006: BflyEyeRight
+    400008: BflyFrill01
+    400010: BflyFrill02
+    400012: BflyFrill03
+    400014: BflyFrill04
+    400016: BflyFrill05
+    400018: BflyFrill06
+    400020: BflyFrill07
+    400022: BflyFrill08
+    400024: BflyHeadBase
+    400026: BflyTail
+    400028: BflyWingsLeft
+    400030: BflyWingsRight
+    400032: //RootNode
+    2100000: Mat_WurmHead
+    2100002: Mat_WurmEyes
+    2100004: Mat_WurmTail
+    2100006: Mat_WurmFrill
+    2100008: Mat_WurmSegment
+    2100010: lambert1
+    2300000: BflyAntennas
+    2300002: BflyBody
+    2300004: BflyEyeLeft
+    2300006: BflyEyeRight
+    2300008: BflyFrill01
+    2300010: BflyFrill02
+    2300012: BflyFrill03
+    2300014: BflyFrill04
+    2300016: BflyFrill05
+    2300018: BflyFrill06
+    2300020: BflyFrill07
+    2300022: BflyFrill08
+    2300024: BflyHeadBase
+    2300026: BflyTail
+    2300028: BflyWingsLeft
+    2300030: BflyWingsRight
+    3300000: BflyAntennas
+    3300002: BflyBody
+    3300004: BflyEyeLeft
+    3300006: BflyEyeRight
+    3300008: BflyFrill01
+    3300010: BflyFrill02
+    3300012: BflyFrill03
+    3300014: BflyFrill04
+    3300016: BflyFrill05
+    3300018: BflyFrill06
+    3300020: BflyFrill07
+    3300022: BflyFrill08
+    3300024: BflyHeadBase
+    3300026: BflyTail
+    3300028: BflyWingsLeft
+    3300030: BflyWingsRight
+    4300000: BflyHeadBase
+    4300002: BflyEyeRight
+    4300004: BflyEyeLeft
+    4300006: BflyTail
+    4300008: BflyFrill06
+    4300010: BflyFrill07
+    4300012: BflyFrill08
+    4300014: BflyFrill03
+    4300016: BflyFrill02
+    4300018: BflyFrill01
+    4300020: BflyBody
+    4300022: BflyFrill05
+    4300024: BflyFrill04
+    4300026: BflyAntennas
+    4300028: BflyWingsRight
+    4300030: BflyWingsLeft
+    7400000: Take 001
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 120
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
